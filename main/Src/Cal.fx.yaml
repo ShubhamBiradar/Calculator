@@ -1,0 +1,142 @@
+Cal As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Label2 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =70
+        Size: =28
+        Text: ="Second Number"
+        Width: =284
+        X: =51
+        Y: =150
+        ZIndex: =1
+
+    Label2_1 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =70
+        Size: =28
+        Text: ="First Number"
+        Width: =284
+        X: =51
+        Y: =49
+        ZIndex: =2
+
+    txtnum2 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Set(num1,txtnum1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =57
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        OnChange: =Set(num2,txtnum2)
+        Size: =13
+        Width: =101
+        X: =500
+        Y: =150
+        ZIndex: =3
+
+    txtnum1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =63
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        OnChange: =Set(num2,txtnum2)
+        Size: =13
+        Width: =101
+        X: =500
+        Y: =52
+        ZIndex: =4
+
+    ButtonCanvas1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        Height: =73
+        OnSelect: |-
+            =UpdateContext({Result:num1.Text+num2.Text})
+        Text: ="Plus"
+        Width: =178
+        X: =104
+        Y: =556
+        ZIndex: =5
+
+    TextInput3 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Result
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =68
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        Size: =13
+        Width: =145
+        X: =748
+        Y: =100
+        ZIndex: =6
+
+    ButtonCanvas1_1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        Height: =73
+        OnSelect: |-
+            =UpdateContext({Result:num1.Text-num2.Text})
+        Text: ="Minus"
+        Width: =178
+        X: =322
+        Y: =556
+        ZIndex: =7
+
+    ButtonCanvas1_2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        Height: =73
+        OnSelect: |-
+            =UpdateContext({Result:num1.Text*num2.Text})
+        Text: ="Multiply"
+        Width: =178
+        X: =535
+        Y: =556
+        ZIndex: =8
+
+    ButtonCanvas1_3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        Height: =73
+        OnSelect: |-
+            =UpdateContext({Result:num1.Text/num2.Text})
+        Text: ="Divied"
+        Width: =178
+        X: =748
+        Y: =556
+        ZIndex: =9
+
