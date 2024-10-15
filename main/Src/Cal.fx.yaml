@@ -104,39 +104,3 @@ Cal As screen:
         Y: =100
         ZIndex: =6
 
-    ButtonCanvas1_1 As Button:
-        DisplayMode: =DisplayMode.Edit
-        FontSize: =24
-        Height: =73
-        OnSelect: |-
-            =UpdateContext({Result:num1.Text-num2.Text})
-        Text: ="Minus"
-        Width: =178
-        X: =322
-        Y: =556
-        ZIndex: =7
-
-    ButtonCanvas1_2 As Button:
-        DisplayMode: =DisplayMode.Edit
-        FontSize: =24
-        Height: =73
-        OnSelect: |-
-            =UpdateContext({Result:num1.Text*num2.Text})
-        Text: ="Multiply"
-        Width: =178
-        X: =535
-        Y: =556
-        ZIndex: =8
-
-    ButtonCanvas1_3 As Button:
-        DisplayMode: =DisplayMode.Edit
-        FontSize: =24
-        Height: =73
-        OnSelect: |-
-            =UpdateContext({Result:num1.Text/num2.Text})
-        Text: ="Divied"
-        Width: =178
-        X: =748
-        Y: =556
-        ZIndex: =9
-
